@@ -1,0 +1,18 @@
+*{
+    font-style: italic;
+}
+
+.center{
+    text-align: center;
+}
+.purple{
+    background-color:blueviolet;
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+}
+body{
+    margin: 0;
+    height:100vh;
+    background: linear-gradient(to bottom,#4c103d,#852e4e,#a33757,#dc5860,#ffb594);
+}

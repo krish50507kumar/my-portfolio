@@ -1,0 +1,104 @@
+.center {
+    text-align: center;
+}
+.purple {
+    color: rgb(16, 16, 16);
+    background-color: blueviolet;
+    width: 100%;
+
+    padding: 0px;
+    border-radius: 5px;
+    border: 2px
+    
+}
+
+
+.bordered {
+    border: 2px solid black;
+    padding: 5px;
+}
+html , body{
+    margin: 0;
+    min-height: 100vh;
+}
+body{
+    background: linear-gradient(to bottom,#4c103d,#852e4e,#a33757,#dc5860,#ffb594);
+     font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
+    }
+
+
+.display-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box {
+    border: 1px solid lightgray;
+    padding: 10px 10px 10px 5px;
+    margin: 10px;
+    border-radius: 5px;
+    background-color: white;
+    text-align: center;
+    justify-content: center;
+    
+}
+.circle{
+   width: auto;       /* set fixed size */
+    height:33.3%;      /* must match width for circle */
+    object-fit: cover;  /* crop instead of stretching */
+
+}
+.fixedbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+}
+.flip-container {
+    display: flex;
+    gap:20px;
+    perspective: 1000px; /*ya ek 3d space create karta hai fliping the object ke liye ya 3d movement ko possible banane ke liye*/
+} 
+.flip-card {
+    width: 200px;
+    height: 200px;
+    position: relative; /*ya position set karta default position ke hisab se*/
+    transition: transform 0.6s ease;/*ya kisi bhi tarah ki moment ki speed control karta hain , ease is used to make the motion smoother*/
+    transform-style: preserve-3d;/*child element flat hota hain ya usko 3d bana deta hain taki vo parent element ka space main motion kar sake specially 3d motion ka liya*/
+}
+.flip-card:hover {/*jab bhi mouse hover karega .flip-card pur card y axis ka about 180 degree ghoomega*/
+    transform: rotateY(180deg);
+    
+}
+.flip-card-front,
+.flip-card-back {
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;/*ya flip hone wale elements ki position fix karta hain taki vo kahi aur shift na ho motion ka time*/
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /*ya child element ko parent ka 3d space main fit karta hain */
+    backface-visibility: hidden;/*ya back side ko chupa deta hain taki ghumna ka baad samne ka side ka mirror image picha na dikha*/
+
+}
+.flip-card-back {
+    transform: rotateY(180deg);
+}
+a{
+    text-decoration: none;
+    color:white;
+}
+a:hover{
+    text-decoration: underline;
+    color:blue;
+}

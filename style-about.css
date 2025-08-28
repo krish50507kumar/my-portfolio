@@ -1,0 +1,28 @@
+.center {
+    text-align: center;
+}
+.purple {
+    color: rgb(16, 16, 16);
+    background-color: rgb(133,46,78);
+    width: 100%;
+    padding: 0px;
+    border-radius: none;
+    border: 2px solid rgb(16, 16, 16);
+    height: 75px;
+    font-size: 40px;
+    font-weight: bold;
+}
+*{
+    font-style: italic;
+}
+.box{
+    border: 1px solid black;
+    padding: 10px;
+    margin: 10px;
+}
+.body{
+    background-color: rgb(133,46,78);
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+}
